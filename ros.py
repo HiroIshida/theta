@@ -70,7 +70,7 @@ def _getLivePreview(id):
                 if cv2.waitKey(1) == 27:
                     cv2.destroyAllWindows()
                     return
-                #image_pub.publish(bridge.cv2_to_imgmsg(i, "bgr8"))
+                image_pub.publish(bridge.cv2_to_imgmsg(img, "bgr8"))
             except:
                 print("OpenCV Error")
             #rospy.spin()
